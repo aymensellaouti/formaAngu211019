@@ -8,6 +8,7 @@
   class="form-control"
   #inputColor
   (change)="changeColor(inputColor.value)"
+  [(ngModel)]="color"
 >
 
 <button
@@ -16,3 +17,5 @@
 >
   Reset Color
 </button>
+
+La couleur est : {{color}}

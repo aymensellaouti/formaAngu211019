@@ -6,17 +6,21 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { BouttonComponent } from './boutton/boutton.component';
 import { ColorComponent } from './color/color.component';
+import {FormsModule} from '@angular/forms';
+import { CardRotatorComponent } from './card-rotator/card-rotator.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     BouttonComponent,
-    ColorComponent
+    ColorComponent,
+    CardRotatorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
