@@ -11,5 +11,8 @@ export class FirstComponent implements OnInit {
 
   ngOnInit() {
   }
+  handleSonMessage(message) {
+    alert(message);
+  }
 
 }
