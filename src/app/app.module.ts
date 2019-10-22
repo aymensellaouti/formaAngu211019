@@ -8,6 +8,10 @@ import { BouttonComponent } from './boutton/boutton.component';
 import { ColorComponent } from './color/color.component';
 import {FormsModule} from '@angular/forms';
 import { CardRotatorComponent } from './card-rotator/card-rotator.component';
+import { ListComponent } from './cv/list/list.component';
+import { ItemComponent } from './cv/item/item.component';
+import { DetailComponent } from './cv/detail/detail.component';
+import { CvComponent } from './cv/cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { CardRotatorComponent } from './card-rotator/card-rotator.component';
     FirstComponent,
     BouttonComponent,
     ColorComponent,
-    CardRotatorComponent
+    CardRotatorComponent,
+    ListComponent,
+    ItemComponent,
+    DetailComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,
