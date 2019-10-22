@@ -13,6 +13,14 @@ import { ItemComponent } from './cv/item/item.component';
 import { DetailComponent } from './cv/detail/detail.component';
 import { CvComponent } from './cv/cv/cv.component';
 import { NgStyleComponent } from './directive/ng-style/ng-style.component';
+import { NgClassComponent } from './directive/ng-class/ng-class.component';
+import { HighlightDirective } from './highlight.directive';
+import { DefaultImagePipe } from './default-image.pipe';
+import {LoggerService} from './Services/logger.service';
+import { TodoComponent } from './todo/todo.component';
+import { HeaderComponent } from './header/header.component';
+import { RouteSimulatorComponent } from './route-simulator/route-simulator.component';
+import { DetailsCvIdComponent } from './cv/details-cv-id/details-cv-id.component';
 
 @NgModule({
   declarations: [
@@ -25,14 +33,21 @@ import { NgStyleComponent } from './directive/ng-style/ng-style.component';
     ItemComponent,
     DetailComponent,
     CvComponent,
-    NgStyleComponent
+    NgStyleComponent,
+    NgClassComponent,
+    HighlightDirective,
+    DefaultImagePipe,
+    TodoComponent,
+    HeaderComponent,
+    RouteSimulatorComponent,
+    DetailsCvIdComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [LoggerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

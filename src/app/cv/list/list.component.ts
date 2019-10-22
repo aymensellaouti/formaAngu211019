@@ -1,6 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Personne} from '../../Model/personne';
-import {EventHandlerVars} from '@angular/compiler/src/compiler_util/expression_converter';
+import {CvService} from '../services/cv.service';
 
 @Component({
   selector: 'app-list',
@@ -9,18 +9,14 @@ import {EventHandlerVars} from '@angular/compiler/src/compiler_util/expression_c
 })
 export class ListComponent implements OnInit {
   personnes: Personne[];
-  constructor() { }
+  constructor(
+    private cvService: CvService
+  ) { }
   @Output() sendPersonneToCv = new EventEmitter();
 
   ngOnInit() {
-    this.personnes = [
-      new Personne(1, 'aymen',
-        'sellaouti', 37, 'as.jpg', 777777, 'teacher' ),
-      new Personne(2, 'ahmed',
-        'mohamed', 27, 'zizou.jpeg', 11111, 'rien' ),
-    ];
+    this.personnes = this.cvService.getPersonnes();
   }
-
   sendItem(personne: Personne) {
     this.sendPersonneToCv.emit(personne);
   }

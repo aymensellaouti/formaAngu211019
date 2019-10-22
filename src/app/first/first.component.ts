@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TodoService} from '../Services/todo.service';
 
 @Component({
   selector: 'app-first',
@@ -7,12 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private todoService: TodoService
+  ) { }
 
   ngOnInit() {
   }
   handleSonMessage(message) {
     alert(message);
+  }
+  logTodo() {
+    this.todoService.loggerTodo();
   }
 
 }

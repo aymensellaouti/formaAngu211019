@@ -2,4 +2,4 @@
   first works!
 </p>
 
-<app-boutton (sendDataToFather)="handleSonMessage($event)" [message]="'hide'"></app-boutton>
+<app-boutton  (click)="logTodo()" (sendDataToFather)="handleSonMessage($event)" [message]="'hide'"></app-boutton>
