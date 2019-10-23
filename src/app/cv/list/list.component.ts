@@ -15,7 +15,14 @@ export class ListComponent implements OnInit {
   @Output() sendPersonneToCv = new EventEmitter();
 
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => this.personnes = personnes,
+      (error) => {
+        console.log(error);
+        alert('Pbm with HTTP Connexion These data are Fake :\'');
+        this.personnes = this.cvService.getFakePersonnes();
+      }
+    );
   }
   sendItem(personne: Personne) {
     this.sendPersonneToCv.emit(personne);

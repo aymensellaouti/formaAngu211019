@@ -24,6 +24,10 @@ import { DetailsCvIdComponent } from './cv/details-cv-id/details-cv-id.component
 import { LoginComponent } from './login/login.component';
 import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 import { ObservableComponent } from './observable/observable.component';
+import { HttpComponent } from './http/http.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {AuthGuard} from './guard/authGuard';
+import {LoginInterceptorProvider} from './interceptors/login.interceptor';
 
 @NgModule({
   declarations: [
@@ -46,14 +50,19 @@ import { ObservableComponent } from './observable/observable.component';
     DetailsCvIdComponent,
     LoginComponent,
     AddPersonneComponent,
-    ObservableComponent
+    ObservableComponent,
+    HttpComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [LoggerService],
+  providers: [
+    AuthGuard,
+    LoginInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
