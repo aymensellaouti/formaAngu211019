@@ -12,7 +12,16 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link"
+           [routerLink]="['cv/add']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+          Ajouter une Personne
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" [routerLink]="['todo']" routerLinkActive="active">Todo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['login']" routerLinkActive="active">Login</a>
       </li>
     </ul>
   </div>

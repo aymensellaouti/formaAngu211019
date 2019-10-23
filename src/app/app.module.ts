@@ -21,6 +21,9 @@ import { TodoComponent } from './todo/todo.component';
 import { HeaderComponent } from './header/header.component';
 import { RouteSimulatorComponent } from './route-simulator/route-simulator.component';
 import { DetailsCvIdComponent } from './cv/details-cv-id/details-cv-id.component';
+import { LoginComponent } from './login/login.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
+import { ObservableComponent } from './observable/observable.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { DetailsCvIdComponent } from './cv/details-cv-id/details-cv-id.component
     TodoComponent,
     HeaderComponent,
     RouteSimulatorComponent,
-    DetailsCvIdComponent
+    DetailsCvIdComponent,
+    LoginComponent,
+    AddPersonneComponent,
+    ObservableComponent
   ],
   imports: [
     BrowserModule,
